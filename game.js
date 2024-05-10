@@ -24,10 +24,6 @@ $(".btn").on("click", function () {
     playSound(userChosenColour);
     animatePress(userChosenColour);
     checkAnswer(userClickedPattern.length-1);
-    console.log(userClickedPattern.length);
-    console.log(gamePattern.length);
-    console.log(userClickedPattern);
-    console.log(gamePattern);
 })
 
 function checkAnswer(currentLevel) {
@@ -41,6 +37,7 @@ function checkAnswer(currentLevel) {
             }, 1000);
         }
     } else {
+        console.log('Wrong');
         playSound("wrong")
         $('body').addClass('game-over');
         setTimeout(() => {
